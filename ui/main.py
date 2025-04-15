@@ -154,7 +154,7 @@ class MainWindow(QMainWindow):
 
         self.data_path = self.get_data_path()
 
-        self.icon = QIcon(str(self.data_path / "icon.png"))
+        self.icon = QIcon(str(self.data_path / "icon.ico"))
         self.setWindowIcon(self.icon)
 
         # Add signals
@@ -461,7 +461,7 @@ class BNWindow(QWidget):
 
         self.data_path = self.get_data_path()
 
-        self.icon = QIcon(str(self.data_path / "icon.png"))
+        self.icon = QIcon(str(self.data_path / "icon.ico"))
         self.setWindowIcon(self.icon)
 
         self.graph_widget = graphwidget
@@ -714,7 +714,7 @@ class FinanceWindow(QWidget):
 
         self.data_path = self.get_data_path()
 
-        self.icon = QIcon(str(self.data_path / "icon.png"))
+        self.icon = QIcon(str(self.data_path / "icon.ico"))
         self.setWindowIcon(self.icon)
         self.setWindowTitle("DAiCE - Finance Dashboard")
 
