@@ -1,0 +1,294 @@
+{
+    "nodes": [
+        {
+            "name": "Mvts",
+            "edges": [],
+            "distribution": "lognorm",
+            "parameters_small": [
+                8.45,
+                208.0,
+                357.40283786587
+            ],
+            "parameters_large": [
+                2.1844173927,
+                273.8724492306749,
+                30308.628577637483
+            ],
+            "condition": "n.a.",
+            "x": 0.353118936285269,
+            "y": 0.8719661545312848
+        },
+        {
+            "name": "L_RWY",
+            "edges": [
+                {
+                    "parent": "AC code",
+                    "child": "L_RWY",
+                    "string": "r_8,2",
+                    "cond_rank_corr": 0.79,
+                    "rank_corr": 0.7899999999999999,
+                    "rank_corr_bounds": [
+                        -1.0,
+                        1.0
+                    ]
+                },
+                {
+                    "parent": "Mvts",
+                    "child": "L_RWY",
+                    "string": "r_1,2|8",
+                    "cond_rank_corr": 0.63,
+                    "rank_corr": 0.3702618856575713,
+                    "rank_corr_bounds": [
+                        -0.5766874152335123,
+                        0.5766874152335123
+                    ]
+                }
+            ],
+            "distribution": "triang",
+            "parameters_small": [
+                1192.0,
+                2678.0,
+                3120.0
+            ],
+            "parameters_large": [
+                2700.0,
+                3036.0,
+                3763.0
+            ],
+            "condition": "n.a.",
+            "x": 0.23418265101631833,
+            "y": 0.6843386773547094
+        },
+        {
+            "name": "L_TWY",
+            "edges": [
+                {
+                    "parent": "Mvts",
+                    "child": "L_TWY",
+                    "string": "r_1,3",
+                    "cond_rank_corr": 0.72,
+                    "rank_corr": 0.72,
+                    "rank_corr_bounds": [
+                        -1.0,
+                        1.0
+                    ]
+                },
+                {
+                    "parent": "L_RWY",
+                    "child": "L_TWY",
+                    "string": "r_2,3|1",
+                    "cond_rank_corr": 0.63,
+                    "rank_corr": 0.6709287907041837,
+                    "rank_corr_bounds": [
+                        -0.3270093783826158,
+                        0.9001762122589524
+                    ]
+                }
+            ],
+            "distribution": "triang",
+            "parameters_small": [
+                48.57,
+                79.98,
+                100.1
+            ],
+            "parameters_large": [
+                19.9,
+                87.2,
+                100.0
+            ],
+            "condition": "n.a.",
+            "x": 0.43343830518179227,
+            "y": 0.6214651525272769
+        },
+        {
+            "name": "#RWY",
+            "edges": [
+                {
+                    "parent": "Mvts",
+                    "child": "#RWY",
+                    "string": "r_1,4",
+                    "cond_rank_corr": 0.62,
+                    "rank_corr": 0.6199999999999998,
+                    "rank_corr_bounds": [
+                        -1.0,
+                        1.0
+                    ]
+                }
+            ],
+            "distribution": "expon",
+            "parameters_small": [
+                1.0,
+                0.33333333333326
+            ],
+            "parameters_large": [
+                1.0,
+                0.987179487179
+            ],
+            "condition": "n.a.",
+            "x": 0.6497439323090627,
+            "y": 0.6874701784521424
+        },
+        {
+            "name": "A_Apron",
+            "edges": [
+                {
+                    "parent": "Mvts",
+                    "child": "A_Apron",
+                    "string": "r_1,5",
+                    "cond_rank_corr": 0.78,
+                    "rank_corr": 0.7799999999999998,
+                    "rank_corr_bounds": [
+                        -1.0,
+                        1.0
+                    ]
+                },
+                {
+                    "parent": "AC code",
+                    "child": "A_Apron",
+                    "string": "r_8,5|1",
+                    "cond_rank_corr": 0.78,
+                    "rank_corr": 0.4654028219490872,
+                    "rank_corr_bounds": [
+                        -0.589463872197175,
+                        0.589463872197175
+                    ]
+                }
+            ],
+            "distribution": "triang",
+            "parameters_small": [
+                4632.0,
+                11120.0,
+                480100.0
+            ],
+            "parameters_large": [
+                6994.0,
+                15430.0,
+                3040000.0
+            ],
+            "condition": "n.a.",
+            "x": 0.8318541845595955,
+            "y": 0.689855902280752
+        },
+        {
+            "name": "#Tpds",
+            "edges": [
+                {
+                    "parent": "L_RWY",
+                    "child": "#Tpds",
+                    "string": "r_2,6",
+                    "cond_rank_corr": -0.26,
+                    "rank_corr": -0.26,
+                    "rank_corr_bounds": [
+                        -1.0,
+                        1.0
+                    ]
+                },
+                {
+                    "parent": "Mvts",
+                    "child": "#Tpds",
+                    "string": "r_1,6|2",
+                    "cond_rank_corr": -0.51,
+                    "rank_corr": -0.5552498124937323,
+                    "rank_corr_bounds": [
+                        -0.991991721626178,
+                        0.7688398619498604
+                    ]
+                }
+            ],
+            "distribution": "triang",
+            "parameters_small": [
+                0.0,
+                1.0,
+                3.0
+            ],
+            "parameters_large": [
+                0.0,
+                1.0,
+                3.0
+            ],
+            "condition": "n.a.",
+            "x": 0.2087349301778159,
+            "y": 0.3455658936921462
+        },
+        {
+            "name": "#Exits",
+            "edges": [
+                {
+                    "parent": "L_RWY",
+                    "child": "#Exits",
+                    "string": "r_2,7",
+                    "cond_rank_corr": 0.73,
+                    "rank_corr": 0.73,
+                    "rank_corr_bounds": [
+                        -1.0,
+                        1.0
+                    ]
+                },
+                {
+                    "parent": "L_TWY",
+                    "child": "#Exits",
+                    "string": "r_3,7|2",
+                    "cond_rank_corr": 0.83,
+                    "rank_corr": 0.9131805971350092,
+                    "rank_corr_bounds": [
+                        0.028885610718407964,
+                        0.9962109676665497
+                    ]
+                },
+                {
+                    "parent": "Mvts",
+                    "child": "#Exits",
+                    "string": "r_1,7|2,3",
+                    "cond_rank_corr": 0.76,
+                    "rank_corr": 0.8216202497652468,
+                    "rank_corr_bounds": [
+                        0.4002059147267504,
+                        0.8776767089861379
+                    ]
+                }
+            ],
+            "distribution": "triang",
+            "parameters_small": [
+                1.0,
+                3.5,
+                6.0
+            ],
+            "parameters_large": [
+                2.0,
+                4.0,
+                6.0
+            ],
+            "condition": "n.a.",
+            "x": 0.7038203390908803,
+            "y": 0.3463116709609696
+        },
+        {
+            "name": "AC code",
+            "edges": [],
+            "distribution": "norm",
+            "parameters_small": [
+                28.5,
+                5.917
+            ],
+            "parameters_large": [
+                48.87,
+                6.343
+            ],
+            "condition": "n.a.",
+            "x": 0.6227057289181539,
+            "y": 0.8671947068740656
+        }
+    ],
+    "charlist": [
+        {
+            "project_name": " Case Study",
+            "pax": "0",
+            "c_concrete": "n.a.",
+            "c_asphalt": "n.a.",
+            "c_ctb": "n.a.",
+            "c_sand": "n.a.",
+            "ils": "n.a.",
+            "atc": "n.a."
+        }
+    ]
+}
